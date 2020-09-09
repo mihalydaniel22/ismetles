@@ -49,28 +49,37 @@ namespace ismetles
 
         static string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };
 
-        static void Main(string[] args)
+        static int jatekosvalasztas()
         {
-            Random vel = new Random();
-           
-
-            int gepValasz = vel.Next(0, 3);
-           
-            // Console.WriteLine("Gép választása: {0}", lehetoseg[gepValasz]);
-
-            int jatekosvalasz;
-
             Console.WriteLine("Kő {0}, Papír {1}, Olló {2}");
 
             Console.Write("Válassz: ");
 
-            jatekosvalasz = Convert.ToInt32(Console.ReadLine());
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        static int gepvalasztas()
+        {
+            Random vel = new Random();
+
+            return vel.Next(0, 3);
+        }
+
+        static void Main(string[] args)
+        {
+
+
+            // Console.WriteLine("Gép választása: {0}", lehetoseg[gepValasz]);
+
+            int jatekosvalasz = jatekosvalasztas();
+
+            //int jatekosvalasztas;
+
+            int gepvalasz = gepvalasztas();
 
             Console.WriteLine("Játékos választása: {0}", lehetoseg[jatekosvalasz]);
 
-
-
-            eredmenykiiras(gepValasz, jatekosvalasz);
+           // eredmenykiiras(gepValasz, jatekosvalasz);
 
             Console.ReadKey();
         }
