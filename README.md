@@ -8,7 +8,7 @@
 	- Papír legyőzi a követ
 	- Olló legyőzi a papírt
 
- [] A nyerés megállapítását kiszervezzük metódusba
+ [x] A nyerés megállapítását kiszervezzük metódusba
 	- Ember nyer()
 	- Visszaadott érték --> 0, 1, 2
 	- 0: Döntetlen

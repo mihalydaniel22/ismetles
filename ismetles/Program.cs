@@ -32,6 +32,7 @@ namespace ismetles
 
         static void eredmenykiiras(int gep, int ember)
         {
+            Console.WriteLine("Gép: {0} --- Játékos: {1}", lehetoseg[gep], lehetoseg[ember]);
             switch (embernyer(gep, ember))
             {
                 case 0:
@@ -46,11 +47,12 @@ namespace ismetles
             }
         }
 
+        static string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };
+
         static void Main(string[] args)
         {
             Random vel = new Random();
-
-            string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };
+           
 
             int gepValasz = vel.Next(0, 3);
            
@@ -66,7 +68,7 @@ namespace ismetles
 
             Console.WriteLine("Játékos választása: {0}", lehetoseg[jatekosvalasz]);
 
-            Console.WriteLine("Gép: {0} --- Játékos: {1}", lehetoseg[gepValasz], lehetoseg[jatekosvalasz]);
+
 
             eredmenykiiras(gepValasz, jatekosvalasz);
 
