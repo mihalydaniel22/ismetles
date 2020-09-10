@@ -65,23 +65,37 @@ namespace ismetles
             return vel.Next(0, 3);
         }
 
+        private static bool AkarJatszani()
+        {
+            Console.WriteLine("¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤");
+            Console.Write("Tovább [i/n:]?");
+            string valasz = Console.ReadLine().ToLower();
+            Console.WriteLine("\n¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤");
+            if (valasz == "i")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         static void Main(string[] args)
         {
+            bool tovabb = true;
 
+            while (tovabb)
+            {
+                int jatekosvalasz = jatekosvalasztas();
 
-            // Console.WriteLine("Gép választása: {0}", lehetoseg[gepValasz]);
+                int gepvalasz = gepvalasztas();
 
-            int jatekosvalasz = jatekosvalasztas();
+                eredmenykiiras(gepvalasz, jatekosvalasz);
 
-            //int jatekosvalasztas;
-
-            int gepvalasz = gepvalasztas();
-
-            Console.WriteLine("Játékos választása: {0}", lehetoseg[jatekosvalasz]);
-
-           // eredmenykiiras(gepValasz, jatekosvalasz);
-
+                tovabb = AkarJatszani();
+            }
             Console.ReadKey();
-        }
+        }        
     }
 }
