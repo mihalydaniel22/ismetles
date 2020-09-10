@@ -92,7 +92,7 @@ namespace ismetles
         {
             StatisztikaFajlbol();
 
-            
+            StatisztikaFajlba();
 
             bool tovabb = true;
 
@@ -128,6 +128,13 @@ namespace ismetles
             }
             stat.Close();
             Console.WriteLine("-------------------------Statisztika-------------------------");
+        }
+
+        static void StatisztikaFajlba()
+        {
+            StreamWriter statis = new StreamWriter("Statisztika.txt");
+
+            statis.Close();
         }
 
         static void StatisztikaKiiras()
