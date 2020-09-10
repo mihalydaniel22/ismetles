@@ -25,3 +25,8 @@ majd képek
 - [x] Addig játszunk amíg ki nem lépünk a játékból
 - [x] Statisztika
 	- gép, játékos, menetek száma
+- [] Eredmények fájlba írása és megjelenítése
+	- 1. érték --> menet
+	- 2. érték --> Játékos
+	- 3. érték --> Gép
+	- értékek ';'-vel elválasztva
